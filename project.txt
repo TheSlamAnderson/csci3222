@@ -1,0 +1,132 @@
+*********** Database 3222 Semester Project ************
+
+This project will involve designing and creating a database for an organization.  In the design of a database, there is no single "perfect" design.  So your database design may not match my design, or another student's design. So, for example, my design my have 7 tables, and your design may have 10 tables.  But they both may work equally well. You will be graded on how well your design matches the description in the paragraphs below, and whether it meets all the project requirements.  
+
+Read the description and all the requirements (especially the queries you will need to run) before you begin the design process.  When the project is complete, you will turn in 2 documents:
+
+(1) an E-R diagram document
+(2) an SQL script with all the SQL statements included
+
+--------- Description --------------
+
+Members of a small town in Tennessee are tired of having nothing to do on the weekend.  They want to start a local club where people can pay a monthly fee to be a member and participate in various activities.  Activities will be offered for 3 basic age groups:
+ - 12-18 years old
+ - 19-55 years old
+ - 56 and older
+
+The club will have:
+ - short order grill
+   * sandwiches
+   * salads
+ - bar
+   * late afternoons
+   * evenings
+ - basketball court
+ - tennis courts
+ - shuffle board
+ - climbing wall
+ - large TV/movie room with a flat screen TV
+ - computer game room
+   * LAN setup
+   * several smaller TV's
+   * game consoles 
+ - weight room.
+
+A few years down the road, they plan to add:
+ - swimming pool
+ - outdoor track
+
+When a person joins, he/she gets a badge with a unique member number that serves as an ID which can be swiped to get into the club, to participate in activities and to use as a charge card while at the club (to pay for meals or other incidentals).
+
+Assumption:  you can assume that each time a card is swiped, the following data will be available from the card swipe system to store into one or more tables in a database:
+ - member name
+ - member ID
+ - date
+ - time
+ - activity
+   * enter club
+   * purchase sandwich
+   * computer game room
+   * climbing wall
+   * purchase beer
+
+You do not have to be concerned with how the data gets into the system.  Just concentrate on the design of the system and what data needs to be stored.
+
+Certain activities will be restricted by age:
+ - 12-18 year olds are not allowed in the bar or the weight room
+ - 56 and older are not allowed in the computer game room
+
+The club needs you to design a database to help them manage the business.  Some of the things they need to keep track of are:
+ - memberships
+ - club dues
+ - activities that members participate in
+ - time of day/night that members visit
+ - operating costs for the club
+   * bills paid out
+   * dues coming in
+   * taxes
+   * etc
+ - general information about the club
+   * ownership
+   * hours
+   * address
+   * etc 
+
+--------- Project Requirements ------------
+
+Complete the following tasks:
+0) Using the description above, design a database for the club. 
+1) Generate an E-R diagram for the database.
+   - use at least 4 entities
+   - each entity must have at least 3 attributes
+2) Diagram the relationships between the entities, including:
+   - name
+   - optionality
+   - degree
+
+
+--- include all the E-R diagrams and relationships in one document ---
+
+3) Ensure that your database is in 2nd normal form and that all the tables follow the rules of referential integrity and entity integrity.
+
+[*** POINTS: E-R Diagrams and Overall Database Design 40% ***]
+
+4) Create a script file, then generate all the SQL commands needed to create the database and database tables and put them in this script file. 
+  
+(Success Hint: Be sure to add the command to create the database at the top of the file.  preceed this command with a check to see if the database already exists, or a drop command so that you won't get errors about the database already existing)
+
+(Success Hint: Because you will most likely be running this script multiple times, be sure do add drop table statements prior to each create table statement in the script to avoid getting error messages about the table already being created.)
+
+(Success Hint: Generate the create table commands one at a time and get each one working before adding the next command to the script file. Once you have all the tables being created successfully in the script file, move on to the next step of adding the insert statements to the script file for each table)
+
+[*** POINTS:  Create Tables 15% ***]
+
+5) Create the SQL statements to insert sample data into each table.  Add these statements to the script file.
+    - data entered into the tables must span more than one month.  You don't have to enter more than 30 records, but you might have 2 records in April and 5 records in May....this spans more than one month.
+    - you must have at least 10 data records in each table
+
+6) Execute the script file - which should create the database, then create and populate your tables.
+
+[*** POINTS:  Data Insert 10% ***]
+
+7) Generate SQL Select statements that will return data for each of the parameters listed here
+   - A list of all the member names and the date they joined
+   - How many members are in each age group
+   - The total amount of money earned from dues at the club for a specific month (pick any month, depending on the data you enter)
+   - Names and age of all members who have used the climbing wall
+   - The name, age and activity of members who used the club between 6pm and 8pm
+   - A list of all members not allowed into the bar
+   - The name and phone number of all members whose phone number begins with "423"
+
+[*** POINTS:  Select Statements 35% ***]
+
+Once you have the select statements executing properly, add these select statements to the bottom of your SQL script file.
+
+----------- Turning in Your Assignment ----------------
+
+Zip the E-R diagram document and the SQL script file together as "yourLastName_Project.zip".  Drop this zip file into the drop box.
+
+--------------- GRADING ----------------------
+To grade your assignment, I will evaluate and score the E-R diagrams.  Next, I will execute the SQL script file on my database installation and evaluate the results.  
+
+Important:  NO PARTIAL CREDIT will be given for statements that contain SQL errors.  Be sure that all your SQL statements are error free. (they may not return perfect results, but they should not have errors related to missing quotes or commas, etc)
